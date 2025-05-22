@@ -9,9 +9,10 @@
     "restartPolicyType": "NEVER"
   },
   "cron": [
-    {
-      "schedule": "0 8 * * *",
-      "command": "python test2.py"
-    }
-  ]
+  { "schedule": "0 8 * * *", "command": "python test2.py" },
+  { "schedule": "0 9 * * *", "command": "python test2.py" },
+  { "schedule": "0 10 * * *", "command": "python test2.py" },
+  { "schedule": "0 11 * * *", "command": "python test2.py" },
+  { "schedule": "0 12 * * *", "command": "python test2.py" }
+]
 }
