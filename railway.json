@@ -1,0 +1,17 @@
+{
+  "build": {
+    "env": {
+      "PLAYWRIGHT_BROWSERS_PATH": "0"
+    }
+  },
+  "deploy": {
+    "startCommand": "python test2.py",
+    "restartPolicyType": "NEVER"
+  },
+  "cron": [
+    {
+      "schedule": "0 8 * * *",
+      "command": "python test2.py"
+    }
+  ]
+}
