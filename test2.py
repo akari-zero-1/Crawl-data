@@ -3,7 +3,7 @@ import time
 import random
 import json
 import os
-os.environ["PLAYWRIGHT_BROWSERS_PATH"] = "/opt/render/project/.playwright"
+os.system("playwright install chromium")
 
 
 
