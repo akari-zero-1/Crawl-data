@@ -4,7 +4,8 @@ from datetime import datetime, timezone
 
 
 def run():
-    client = MongoClient("mongodb://localhost:27017")
+    uri ="mongodb+srv://vuminhtri1104:hoilamgi123456@cluster0.htououq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    client = MongoClient(uri)
     db = client["tiktok_data"]
     collection = db["video_urls"]
 
