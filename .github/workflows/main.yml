@@ -2,7 +2,7 @@ name: Daily Crawler
 
 on:
   schedule:
-    - cron: '0 2 * * *'
+    - cron: '32 7 * * *'
   workflow_dispatch:
 
 jobs:
@@ -24,4 +24,4 @@ jobs:
           playwright install
 
       - name: Run crawler
-        run: python test2.py
+        run: python Crawl_data_auto.py

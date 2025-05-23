@@ -3,11 +3,9 @@ import time
 import random
 import json
 import os
-os.system("playwright install chromium")
 
 
-
-def explore_tiktok_scroll_and_collect():
+def run():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True, args=["--no-sandbox", "--disable-setuid-sandbox"])
         page = browser.new_page()
@@ -38,7 +36,6 @@ def explore_tiktok_scroll_and_collect():
                         if collected >= 60:
                             break
 
-                # Scroll xuống 1000 px
                 page.evaluate("window.scrollBy(0, 1000);")
                 time.sleep(random.randint(1, 5))
                 round_counter += 1
@@ -59,6 +56,5 @@ def explore_tiktok_scroll_and_collect():
             json.dump(output_data, f, ensure_ascii=False, indent=4)
             print("Save file video_url.json!")
 
-
 if __name__ == "__main__":
-    explore_tiktok_scroll_and_collect()
+    run()
